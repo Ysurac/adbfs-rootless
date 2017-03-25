@@ -159,12 +159,13 @@ queue<string> exec_command(const string& command)
     queue<string> output;
     FILE *fp = popen(command.c_str(), "r" );
 
-    char buff[1000];
+    char buff[2000];
     string tmp_string;
     while ( fgets( buff, sizeof buff, fp ) != NULL && !feof(fp) )
     {
         tmp_string.assign(buff);
-        tmp_string.erase(tmp_string.size()-2);
+        //tmp_string.erase(tmp_string.size()-2);
+        tmp_string.erase(tmp_string.size()-1);
         output.push(tmp_string);
     }
 

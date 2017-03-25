@@ -1,4 +1,5 @@
 This variant of adbfs workous even WITHOUT having root access (busybox) on your phone!
+This is a dirty version for Android 7.x
 
 Instructions:
 =============
